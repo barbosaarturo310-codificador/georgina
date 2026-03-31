@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>¿Me perdonas Georgina de mi vida? 💗</title>
+
+<style>
+  body {
+    text-align: center;
+    font-family: Arial;
+    margin-top: 50px;
+  }
+
+  button {
+    padding: 12px 25px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  #noButton {
+    position: relative;
+  }
+
+  #message {
+    display: none;
+    margin-top: 20px;
+    font-size: 22px;
+  }
+</style>
+
+<script>
+function showThankYouMessage() {
+    document.getElementById('message').style.display = 'block';
+    document.getElementById('siButton').style.display = 'none';
+    document.getElementById('noButton').style.display = 'none';
+    document.getElementById('title').innerText = "Sabía que dirías que sí 😘";
+}
+
+function moveNoButton() {
+    const noButton = document.getElementById('noButton');
+    const x = Math.random() * 300 - 150;
+    const y = Math.random() * 300 - 150;
+    noButton.style.transform = `translate(${x}px, ${y}px)`;
+}
+</script>
+
+</head>
+
+<body>
+
+<h1 id="title">¿Me perdonas Georgina de mi vida? 💗</h1>
+
+<button id="siButton" onclick="showThankYouMessage()">Sí 💗</button>
+<button id="noButton" onmouseover="moveNoButton()">No, te odio Arturo 💔</button>
+
+<div id="message">
+  <p>Muchas gracias mi Danita hermosa, te amo 💗</p>
+  <p>Si tu respuesta fue sí es porque me amas, yo sabía 😘</p>
+</div>
+
+</body>
+</html>
