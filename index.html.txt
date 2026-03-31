@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>¿Me perdonas Georgina de mi vida? 💗</title>
+
+<style>
+  body {
+    text-align: center;
+    font-family: Arial;
+    margin-top: 30px;
+    background: linear-gradient(#ffe6f0, #ffccd5);
+    overflow: hidden;
+  }
+
+  h1 { font-size: 32px; }
+
+  img {
+    width: 280px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 20px 40px;
+    font-size: 22px;
+    margin: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+  }
+
+  #siButton { background-color: #ff4d88; color: white; }
+
+  #noButton {
+    background-color: #444;
+    color: white;
+    position: absolute;
+  }
+
+  #message {
+    display: none;
+    margin-top: 20px;
+    font-size: 24px;
+  }
+</style>
+
+<script>
+function showThankYouMessage() {
+    document.getElementById('message').style.display = 'block';
+    document.getElementById('siButton').style.display = 'none';
+    document.getElementById('noButton').style.display = 'none';
+    document.getElementById('title').style.display = 'none';
+}
+
+function moveNoButton() {
+    const noButton = document.getElementById('noButton');
+    const width = window.innerWidth - noButton.offsetWidth;
+    const height = window.innerHeight - noButton.offsetHeight;
+    const x = Math.random() * width;
+    const y = Math.random() * height;
+    noButton.style.left = x + 'px';
+    noButton.style.top = y + 'px';
+}
+</script>
+</head>
+
+<body>
+
+<img src="IMG_2629.jpeg">
+
+<h1 id="title">georgina mi amor, perdóname la vida 💗</h1>
+
+<button id="siButton" onclick="showThankYouMessage()">Sí 💗</button>
+
+<button id="noButton" onmouseover="moveNoButton()" ontouchstart="moveNoButton()">
+No, te odio Arturo 💔
+</button>
+
+<div id="message">
+  <p>Muchas gracias mi Danita hermosa, te amo 💗</p>
+  <p>Si tu respuesta fue sí es porque me amas, yo sabía 😘</p>
+</div>
+
+</body>
+</html>
